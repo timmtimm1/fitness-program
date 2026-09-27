@@ -4,6 +4,14 @@ Dados puxados do artefato **Bloco de 12 Semanas** (app pessoal de treino) e da s
 
 > ⚠️ **Dado sensível.** Este arquivo tem peso corporal e histórico de treino. Mantenha este repositório privado.
 
+## Checkpoint — 27/09/2026
+
+Hiato de registro de 11–13 dias (14–16/09 até 27/09) investigado com o usuário: **treino continuou normalmente, só o registro no app parou; nenhum sinal de alerta** (sem dor nova, sono ok, disposição normal). Pelo checklist de indicadores de deload do `periodization-engine` (estagnação, fadiga crônica, distúrbio de sono, dor articular, evitar o treino) — nenhum bateu.
+
+**Veredito**: hiato de hábito de registro, não fisiológico. **Plano não muda.** Retomar semana 5 como escrita (ver "Estrutura do bloco" abaixo), pesagem nova hoje para destravar a média de 7 dias, seguir para a semana 6 e o Deload 1 na semana 7 no cronograma original.
+
+**Em aberto**: o único registro formal de carga (Supino 100 kg × 3 RIR 0, 09/09, num dia que previa 75 kg) não foi esclarecido — teste pontual de 1RM ou nova referência de carga de trabalho? Afeta a leitura de quão perto já se está das metas de semana 5–6.
+
 ## Perfil físico
 
 | Item | Valor |
@@ -34,19 +42,18 @@ Regras fixas em déficit: proteger agachamento / terra romeno / supino / barra f
 
 Cardio: LISS em Zona 2 todo dia de treino (20–45 min conforme a semana) + finalizadores em Zona 4 nos dois dias de Puxar.
 
+### Cargas-alvo semana 5 e 6 (para referência rápida)
+
+| Semana | Agachamento | Supino | Terra romeno | Barra fixa | RIR (principal/isolado) |
+|---|---|---|---|---|---|
+| 5 | 112,5 kg | 80 kg | 112,5 kg | PC · 5×7-8 | 2 / 1 |
+| 6 | 115 kg | 82,5 kg | 115 kg | PC+2,5 · 5×5-6 | 1-2 / 0-1 |
+
 ## Status atual — hoje é 27/09/2026
 
 - **Início do bloco**: 24/08/2026 (segunda-feira) → o calendário do app avança sozinho a partir daqui.
 - **Semana calculada para hoje**: **semana 5 de 12** (fase Acumulação — última semana pesada antes do deload).
 - **Fim previsto do bloco**: 15/11/2026.
-
-### ⚠️ Lacuna real no registro — não finja que os dados estão em dia
-
-O app **registrou dados até 14–18/09** (fim da semana 4). Depois disso, **13 dias sem novo peso registrado, 11 dias sem exercício marcado como feito**, mesmo com a semana avançando sozinha até a 5. Isso pode significar:
-- ele parou de *registrar* no app (mas pode ter continuado treinando de fato), ou
-- ele realmente teve uma quebra de rotina nesse período.
-
-Qualquer análise deve perguntar qual dos dois é, não assumir. Não trate a última pesagem (95 kg, 14/09) como o peso de hoje.
 
 ## Peso registrado
 
@@ -59,7 +66,7 @@ Qualquer análise deve perguntar qual dos dois é, não assumir. Não trate a ú
 | 13/09 | 95,0 |
 | 14/09 | 95,0 |
 
-Queda de 1 kg em 5 dias — ritmo rápido para início de déficit; parte é água/glicogênio baixando, não gordura pura. Sem registro desde então.
+Queda de 1 kg em 5 dias — ritmo rápido para início de déficit; parte é água/glicogênio baixando, não gordura pura. Sem registro entre 14/09 e o checkpoint de 27/09 (ver acima — hiato de registro, não de treino).
 
 ## Adesão ao treino (exercícios marcados como feitos)
 
@@ -74,11 +81,11 @@ Queda de 1 kg em 5 dias — ritmo rápido para início de déficit; parte é ág
 | 4:1 (terça) | 6 |
 | 4:2 (quarta) | 1 |
 
-Nada marcado desde então (seria a partir de 4:3, ~16/09).
+Nada marcado no app entre 4:3 (~16/09) e o checkpoint de 27/09 — confirmado que o treino continuou, só o registro parou.
 
 ## Cargas anotadas
 
-Só um registro formal até agora: **Supino reto — 100 kg × 3 reps, RIR 0** (09/09). O registro de cargas no app existe para todos os principais (agachamento, supino, terra romeno, desenvolvimento, barra fixa) mas quase não foi usado — a maior parte do acompanhamento de carga aconteceu via as caixinhas de "exercício feito", não via este log formal.
+Só um registro formal até agora: **Supino reto — 100 kg × 3 reps, RIR 0** (09/09) — ver "Em aberto" no checkpoint acima. O registro de cargas no app existe para todos os principais (agachamento, supino, terra romeno, desenvolvimento, barra fixa) mas quase não foi usado — a maior parte do acompanhamento de carga aconteceu via as caixinhas de "exercício feito", não via este log formal.
 
 ## Exercícios fora do plano (analisados pelo time program-architect + biomecânica)
 
@@ -115,3 +122,5 @@ O artefato **Bloco de 12 Semanas** é um app pessoal (HTML/JS, três abas: Hoje 
 3. **Recurso novo — "O que eu comi hoje"**: campo de texto livre na aba Comida, o Claude estima macros e compara com a meta do dia.
 4. **Recurso novo — "Como foi o dia"**: campo de cardio + observações na aba Treino, disponível mesmo em dia de descanso, com análise do Claude (leitura do dia + até 3 ajustes + alerta quando há sinal real de risco).
 5. **Este repositório** (`fitness-program`): a skill e o time de agentes (`program-architect`, `exercise-guide`, `nutrition-linker`, `template-builder` + as skills de apoio `periodization-engine` e `exercise-biomechanics`) que o app já citava nos botões "Analisar e encaixar no treino" e "Copiar para o Claude", buscados de `revfactory/harness-100` e limpos de um artefato de exportação que quebraria o frontmatter.
+
+**Nota técnica**: anexar este repositório numa sessão do Claude Code já em andamento (via `add_repo` + `register_repo_root`) não carregou `.claude/skills` nem `.claude/agents` na ferramenta de skills daquela sessão — só o repositório primário da sessão recebe esse carregamento automático. Para usar `/fitness-program` de verdade (com Task/SendMessage entre os 4 agentes), abra uma sessão nova com este repositório como principal.
